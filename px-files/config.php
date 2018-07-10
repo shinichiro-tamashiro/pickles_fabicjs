@@ -374,7 +374,7 @@ return call_user_func( function(){
 	/** config for GUI Editor. */
 	$conf->plugins->px2dt->guieditor = new stdClass;
 
-	/*@$conf->plugins->px2dt->guieditor->custom_fields = array( // broccoli-html-editor のフィールド拡張
+	@$conf->plugins->px2dt->guieditor->custom_fields = array( // broccoli-html-editor のフィールド拡張
         'fabricjs'=>array(
             'backend'=>array(
                 'require' => './px-files/broccoli-fields/fabricjs/backend.js'
@@ -384,7 +384,7 @@ return call_user_func( function(){
                 'function' => 'window.broccoliFieldFabricjs'
             ),
         )
-    );*/
+    );
 
 	/** GUI編集データディレクトリ */
 	// $conf->plugins->px2dt->guieditor->path_data_dir = '{$dirname}/{$filename}_files/guieditor.ignore/';

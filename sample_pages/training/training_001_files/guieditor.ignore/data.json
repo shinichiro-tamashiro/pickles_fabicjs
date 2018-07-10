@@ -1,1 +1,17 @@
-{}
+{
+ "bowl": {
+  "main": {
+   "modId": "_sys/root",
+   "fields": {
+    "main": [
+     {
+      "modId": "normalize:test/fabricjs",
+      "fields": {
+       "href-field": ""
+      }
+     }
+    ]
+   }
+  }
+ }
+}
