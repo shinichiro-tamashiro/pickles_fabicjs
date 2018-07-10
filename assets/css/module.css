@@ -1,0 +1,346 @@
+/* ============================================================================
+ * ModuleList
+ * ========================================================================= */
+/* ----------------------------------------------------------------------------
+ * Structure
+ * ------------------------------------------------------------------------- */
+/* ------------------------------------
+ * Section
+ * --------------------------------- */
+.mdl-section + .mdl-section {
+  margin-top: 50px;
+}
+
+.mdl-section > *:first-child {
+  margin: 0 0 10px;
+}
+
+/* ------------------------------------
+ * Textarea
+ * --------------------------------- */
+.mdl-code {
+  margin: 10px 0 0;
+  position: relative;
+  display: none;
+  background: #000;
+}
+
+.mdl-code.is-active {
+  display: block;
+}
+
+.mdl-code.is-disabled {
+  display: none;
+}
+
+.mdl-code::before {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: -1px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  content: "Source Code";
+}
+
+.mdl-code textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 30px 10px 10px;
+  font-size: 12px;
+  color: #5ce638;
+  line-height: 1.3;
+  display: block;
+  resize: vertical;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+}
+
+/* ------------------------------------
+ * Content
+ * --------------------------------- */
+.mdl-content > *:first-child {
+  margin-top: 10px !important;
+}
+
+/* ------------------------------------
+ * Comment
+ * --------------------------------- */
+.mdl-comment,
+.mdl-comment-all {
+  margin: 10px 0 0;
+  padding: 7px 10px 9px;
+  font-size: 12px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #eee;
+}
+
+.mdl-comment.is-disabled,
+.mdl-comment-all.is-disabled {
+  display: none;
+}
+
+.mdl-comment > *,
+.mdl-comment-all > * {
+  margin-top: 0 !important;
+  line-height: 1.5;
+  position: relative;
+  word-break: break-all;
+}
+
+.mdl-comment > *::first-child,
+.mdl-comment-all > *::first-child {
+  margin-top: 0 !important;
+}
+
+.mdl-comment > * + *,
+.mdl-comment-all > * + * {
+  margin-top: 10px !important;
+  padding-top: 10px;
+  border-top: 1px dotted #999;
+}
+
+.mdl-comment-all {
+  padding: 17px 20px 19px;
+  font-size: 13px;
+  background: #dcf1fb;
+}
+
+/* ----------------------------------------------------------------------------
+ * Element
+ * ------------------------------------------------------------------------- */
+/* ------------------------------------
+ * Dummy
+ * --------------------------------- */
+.m-hdg-img[data-type="dummy"] {
+  background-image: url(/_components/resource/img/img_dummy_1570x520.png);
+}
+
+.m-list-feature__inner[data-type="dummy"] {
+  background-image: url(/_components/resource/img/img_dummy_1255x500.png);
+}
+
+.m-list-feature__img[data-type="dummy"] {
+  background-image: url(/_components/resource/img/img_dummy_1255x500.png);
+}
+
+/* ------------------------------------
+ * Heading
+ * --------------------------------- */
+.mdl-hdg-lv1,
+.mdl-hdg-lv2,
+.mdl-hdg-lv3 {
+  font-weight: normal;
+  color: #000;
+  line-height: 1.4;
+}
+
+/* HeadingLevel1 */
+.mdl-hdg-lv1 {
+  margin: 50px 0;
+}
+
+.mdl-hdg-lv1 .mdl-hdg {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.mdl-hdg-lv1 .mdl-hdg + * {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .mdl-hdg-lv1 {
+    margin: 20px 0 40px;
+  }
+  .mdl-hdg-lv1 .mdl-hdg {
+    font-size: 25px;
+  }
+  .mdl-hdg-lv1 .mdl-hdg + * {
+    margin-top: 12px !important;
+  }
+}
+
+/* HeadingLevel2 */
+.mdl-hdg-lv2 {
+  width: 100%;
+  margin: 40px 0 20px;
+  padding: 5px 10px 5px;
+  font-size: 18px;
+  display: table;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #ddd;
+}
+
+/* HeadingLevel3 */
+.mdl-hdg-lv3 {
+  margin: 40px 0 20px;
+  padding: 0 5px 6px;
+  font-size: 138.5%;
+  border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 767px) {
+  .mdl-hdg-lv3 {
+    margin-top: 30px;
+  }
+}
+
+.mdl-hdg-id {
+  margin-right: 10px;
+  padding: 5px 6px;
+  font-size: 12px;
+  line-height: 1;
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 2px;
+  background: #fff;
+}
+
+/* ------------------------------------
+ * List
+ * --------------------------------- */
+.mdl-list {
+  margin: 20px 0 0;
+}
+
+.mdl-list li {
+  margin: 0 0 7px 0;
+  padding: 0 6px 0 10px;
+  line-height: 1;
+  display: inline-block;
+  border-left: 1px solid #999;
+}
+
+.mdl-list li:last-child {
+  padding-right: 10px;
+  border-right: 1px solid #999;
+}
+
+.mdl-list + .m-tbl th, .mdl-list + .m-tbl td {
+  height: auto;
+}
+
+.mdl-list-notes {
+  margin: 10px 0 0;
+}
+
+.mdl-list-notes > li {
+  margin-top: 10px;
+}
+
+.mdl-list-notes > li:first-child {
+  margin-top: 0;
+}
+
+.mdl-list-notes-fig, .mdl-list-notes-txt {
+  display: table-cell;
+}
+
+.mdl-list-notes-fig {
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+.mdl-list-notes-txt {
+  width: 100%;
+}
+
+.mdl-list-notes-txt > *:first-child {
+  margin-top: 10px;
+}
+
+/* ------------------------------------
+ * Table
+ * --------------------------------- */
+.mdl-tbl {
+  width: 100%;
+  margin: 20px auto 0;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.mdl-tbl thead th {
+  text-align: center;
+}
+
+.mdl-tbl th, .mdl-tbl td {
+  padding: 5px 10px;
+  font-weight: normal;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.mdl-tbl th {
+  width: 20%;
+  background: #eee;
+}
+
+/* ----------------------------------------------------------------------------
+ * Control
+ * ------------------------------------------------------------------------- */
+.mdl-control {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  display: none;
+}
+
+.mdl-control ul,
+.mdl-control ul.mdl-list {
+  width: 120px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #ccc;
+  background: #fff;
+}
+
+.mdl-control ul li,
+.mdl-control ul.mdl-list li {
+  padding: 0;
+  line-height: 1;
+  display: block;
+  border-left: none;
+  border-bottom: 1px dotted #999;
+}
+
+.mdl-control ul li:first-child,
+.mdl-control ul.mdl-list li:first-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.mdl-control ul li:last-child,
+.mdl-control ul.mdl-list li:last-child {
+  border-bottom: none;
+}
+
+.mdl-control ul a,
+.mdl-control ul.mdl-list a {
+  padding: 5px;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  background: #fff;
+}
+
+.mdl-control .mdl-list {
+  border-radius: 0;
+  box-shadow: 0 0 0 #ccc !important;
+  display: none;
+}
+
+.mdl-control .mdl-list li:first-child {
+  border-top: 1px dotted #999;
+}

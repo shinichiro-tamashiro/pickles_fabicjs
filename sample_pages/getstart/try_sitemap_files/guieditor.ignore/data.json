@@ -1,0 +1,759 @@
+{
+ "bowl": {
+  "main": {
+   "modId": "_sys/root",
+   "fields": {
+    "main": [
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## サイトマップはどこにあるか？\r\n\r\nサイトマップは次のパスに配置されています。\r\n\r\n- `./px-files/sitemaps/sitemap.xlsx`\r\n\r\nこのファイルに定義されたサイトマップの設定がページにどのように影響するか、ブラウザで確認しながら見比べてみてください。サイトマップの値を変更してみながら、画面の変化を観察してみましょう。\r\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## サイトマップCSV\r\n\r\n`sitemap.xlsx` を編集してブラウザでプレビューすると、同じフォルダにある `sitemap.csv` も同時に更新されます。\r\n\r\nこのファイルはとても重要です。 XLSXファイルは、ユーザーが編集しやすくするために追加された形式で、Pickles 2 が実際に参照しているのは、このCSVファイルだからです。\r\n\r\n誤って捨ててしまわないようにしましょう。\r\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk-lst",
+      "fields": {
+       "link-list-type": "column3",
+       "thumb_loop": [
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "/sample_pages/getstart/try_sitemap.html",
+          "linkText-field": "サイトマップ",
+          "link-type": "normal"
+         },
+         "subModName": "thumb_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク",
+          "link-type": ""
+         },
+         "subModName": "thumb_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク",
+          "link-type": ""
+         },
+         "subModName": "thumb_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク",
+          "link-type": ""
+         },
+         "subModName": "thumb_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク",
+          "link-type": ""
+         },
+         "subModName": "thumb_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク",
+          "link-type": ""
+         },
+         "subModName": "thumb_loop"
+        }
+       ],
+       "link_loop": [
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク",
+          "link-type": "normal"
+         },
+         "subModName": "link_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク",
+          "link-type": ""
+         },
+         "subModName": "link_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "pdf.pdf",
+          "linkText-field": "PDFリンク",
+          "link-type": "pdf"
+         },
+         "subModName": "link_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "/sample_pages/index.html",
+          "linkText-field": "例）リンク",
+          "link-type": "blank"
+         },
+         "subModName": "link_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク",
+          "link-type": ""
+         },
+         "subModName": "link_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-lst",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク",
+          "link-type": ""
+         },
+         "subModName": "link_loop"
+        }
+       ]
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk-anc",
+      "fields": {
+       "anc-list-type": "vertical",
+       "anc_loop": [
+        {
+         "modId": "normalize:link_button/lnk-anc",
+         "fields": {
+          "anc-field": "#ID",
+          "linkText-field": "アンカーリンク"
+         },
+         "subModName": "anc_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-anc",
+         "fields": {
+          "anc-field": "#ID",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "anc_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-anc",
+         "fields": {
+          "anc-field": "#ID",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "anc_loop"
+        }
+       ]
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk-nav",
+      "fields": {
+       "nav_loop": [
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        }
+       ]
+      }
+     },
+     {
+      "modId": "normalize:link_button/lnk",
+      "fields": {
+       "href-field": "/index.html",
+       "linkText-field": "TOP",
+       "link-type": "normal"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk",
+      "fields": {
+       "href-field": "https://www.yahoo.co.jp/",
+       "linkText-field": "yahoo",
+       "link-type": "blank"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk",
+      "fields": {
+       "href-field": "#modal",
+       "linkText-field": "モーダルリンク",
+       "link-type": "modal"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk",
+      "fields": {
+       "href-field": "pdf.pdf",
+       "linkText-field": "PDFリンク",
+       "link-type": "pdf"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk",
+      "fields": {
+       "href-field": "",
+       "linkText-field": "back",
+       "link-type": "back"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk-anc",
+      "fields": {
+       "anc-list-type": "side",
+       "anc_loop": [
+        {
+         "modId": "normalize:link_button/lnk-anc",
+         "fields": {
+          "anc-field": "#ID",
+          "linkText-field": "アンカー横並びリンク"
+         },
+         "subModName": "anc_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-anc",
+         "fields": {
+          "anc-field": "#ID",
+          "linkText-field": "アンカー横並びリンク"
+         },
+         "subModName": "anc_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-anc",
+         "fields": {
+          "anc-field": "#ID",
+          "linkText-field": "アンカー横並びリンク"
+         },
+         "subModName": "anc_loop",
+         "anchor": "",
+         "dec": ""
+        }
+       ]
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk-nav",
+      "fields": {
+       "nav_loop": [
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "ページナビゲーション"
+         },
+         "subModName": "nav_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "ナビゲーションリンク"
+         },
+         "subModName": "nav_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）リンク"
+         },
+         "subModName": "nav_loop"
+        }
+       ]
+      }
+     },
+     {
+      "modId": "normalize:image/img-cap",
+      "fields": {
+       "caption-field": "キャプション",
+       "alt-field": "alt",
+       "image-field": {
+        "resKey": "125cc376a1567e0438aab60def3ea08c",
+        "path": "./try_sitemap_files/resources/125cc376a1567e0438aab60def3ea08c.txt",
+        "resType": "web",
+        "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk-nav",
+      "fields": {
+       "nav_loop": [
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）ページナビゲーション"
+         },
+         "subModName": "nav_loop"
+        },
+        {
+         "modId": "normalize:link_button/lnk-nav",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "例）ページナビゲーション"
+         },
+         "subModName": "nav_loop"
+        }
+       ]
+      }
+     },
+     {
+      "modId": "normalize:image/img-cap",
+      "fields": {
+       "image-field": {
+        "resKey": "60d16205034e98e8831e988620a9846b",
+        "path": "./try_sitemap_files/resources/60d16205034e98e8831e988620a9846b.txt",
+        "resType": "web",
+        "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+       },
+       "alt-field": "例）代替えテキスト",
+       "caption-field": "例）キャプション"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:image/img-txt",
+      "fields": {
+       "sp-img-type": "stay",
+       "image-field": {
+        "resKey": "fe428db10ab3b10ac661f0a532728d93",
+        "path": "./try_sitemap_files/resources/fe428db10ab3b10ac661f0a532728d93.txt",
+        "resType": "web",
+        "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+       },
+       "alt-field": "オルト",
+       "text-field": "テキストテキストテスト<br>テキストテスト"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:image/img-txt",
+      "fields": {
+       "sp-img-type": "bottom",
+       "image-field": {
+        "resKey": "87d8bce20e4431e4794247887987fe5a",
+        "path": "./try_sitemap_files/resources/87d8bce20e4431e4794247887987fe5a.txt",
+        "resType": "web",
+        "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+       },
+       "alt-field": "テキスト",
+       "text-field": "<p>テキスト<sup>*</sup>テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力</p>\n<p>テキスト<br>テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力テスト入力</p>"
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:link_button/lnk-pager",
+      "fields": {
+       "pager-type": "",
+       "pager_loop": [
+        {
+         "modId": "normalize:link_button/lnk-pager",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "1"
+         },
+         "subModName": "pager_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:link_button/lnk-pager",
+         "fields": {
+          "href-field": "",
+          "linkText-field": "2"
+         },
+         "subModName": "pager_loop",
+         "anchor": "",
+         "dec": ""
+        }
+       ]
+      }
+     },
+     {
+      "modId": "normalize:image/img-car-mv",
+      "fields": {
+       "mv_loop": [
+        {
+         "modId": "normalize:image/img-car-mv",
+         "fields": {
+          "image-field": {
+           "resKey": "989c4f7a3ea5fe0e9f1bab86b8ea0750",
+           "path": "./try_sitemap_files/resources/989c4f7a3ea5fe0e9f1bab86b8ea0750.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "",
+          "title-field": "",
+          "text-field": ""
+         },
+         "subModName": "mv_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-mv",
+         "fields": {
+          "image-field": {
+           "resKey": "3c198b34415d96106a46a45313df7fd8",
+           "path": "./try_sitemap_files/resources/3c198b34415d96106a46a45313df7fd8.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "alt",
+          "title-field": "",
+          "text-field": ""
+         },
+         "subModName": "mv_loop",
+         "anchor": "",
+         "dec": ""
+        }
+       ]
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:image/img-car-card",
+      "fields": {
+       "card_loop": [
+        {
+         "modId": "normalize:image/img-car-card",
+         "fields": {
+          "href-field": "/sample_pages/getstart/try_sitemap.html",
+          "image-field": {
+           "resKey": "2c3d97d7a58da6290cf908f9d1816695",
+           "path": "./try_sitemap_files/resources/2c3d97d7a58da6290cf908f9d1816695.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト",
+          "title-field": "タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル",
+          "text-field": "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+         },
+         "subModName": "card_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-card",
+         "fields": {
+          "href-field": "/sample_pages/getstart/try_sitemap.html",
+          "image-field": {
+           "resKey": "2974c3d1e8b5d9809cc50840caee3b0d",
+           "path": "./try_sitemap_files/resources/2974c3d1e8b5d9809cc50840caee3b0d.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト",
+          "title-field": "タイトル",
+          "text-field": "テキスト"
+         },
+         "subModName": "card_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-card",
+         "fields": {
+          "href-field": "/sample_pages/getstart/try_publish.html",
+          "image-field": {
+           "resKey": "bb203ac9dfb7a626c5f202c3b5cc2a86",
+           "path": "./try_sitemap_files/resources/bb203ac9dfb7a626c5f202c3b5cc2a86.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト",
+          "title-field": "タイトルタイトルタイトル",
+          "text-field": "テキストております。テキスト"
+         },
+         "subModName": "card_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-card",
+         "fields": {
+          "href-field": "/sample_pages/getstart/try_your_project.html",
+          "image-field": {
+           "resKey": "7c63f8d53dbebc148b0747fc6770f8be",
+           "path": "./try_sitemap_files/resources/7c63f8d53dbebc148b0747fc6770f8be.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト",
+          "title-field": "タイトル２",
+          "text-field": "テキスト２"
+         },
+         "subModName": "card_loop",
+         "anchor": "",
+         "dec": ""
+        }
+       ]
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "normalize:image/img-car-bnr",
+      "fields": {
+       "bnr_loop": [
+        {
+         "modId": "normalize:image/img-car-bnr",
+         "fields": {
+          "href-field": "/sample_pages/getstart/try_sitemap.html",
+          "image-field": {
+           "resKey": "a0039b69d46bc46a01c9db659c7f3056",
+           "path": "./try_sitemap_files/resources/a0039b69d46bc46a01c9db659c7f3056.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト"
+         },
+         "subModName": "bnr_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-bnr",
+         "fields": {
+          "href-field": "/sample_pages/getstart/try_sitemap.html",
+          "image-field": {
+           "resKey": "398635ca0096903dd51d01ccb05639e4",
+           "path": "./try_sitemap_files/resources/398635ca0096903dd51d01ccb05639e4.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト"
+         },
+         "subModName": "bnr_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-bnr",
+         "fields": {
+          "href-field": "/sample_pages/getstart/try_contents.html",
+          "image-field": {
+           "resKey": "f61eb14c8e5894cca7c856508a8a104b",
+           "path": "./try_sitemap_files/resources/f61eb14c8e5894cca7c856508a8a104b.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト"
+         },
+         "subModName": "bnr_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-bnr",
+         "fields": {
+          "href-field": "/sample_pages/training/training_003.html",
+          "image-field": {
+           "resKey": "7e363be388179ba1d3a7c21841e29db6",
+           "path": "./try_sitemap_files/resources/7e363be388179ba1d3a7c21841e29db6.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト"
+         },
+         "subModName": "bnr_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-bnr",
+         "fields": {
+          "href-field": "/sample_pages/samples/shared_content.html",
+          "image-field": {
+           "resKey": "3bea09a27b9e9ca5efbe7ab6111df67d",
+           "path": "./try_sitemap_files/resources/3bea09a27b9e9ca5efbe7ab6111df67d.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト"
+         },
+         "subModName": "bnr_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-bnr",
+         "fields": {
+          "href-field": "/sample_pages/samples/ext_htm.htm",
+          "image-field": {
+           "resKey": "479386220be7f24f1419c2c18f35acbf",
+           "path": "./try_sitemap_files/resources/479386220be7f24f1419c2c18f35acbf.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト"
+         },
+         "subModName": "bnr_loop",
+         "anchor": "",
+         "dec": ""
+        },
+        {
+         "modId": "normalize:image/img-car-bnr",
+         "fields": {
+          "href-field": "/sample_pages/samples/shared_content.html",
+          "image-field": {
+           "resKey": "ff7d0fd6271fd09f3f8bba884fd35216",
+           "path": "./try_sitemap_files/resources/ff7d0fd6271fd09f3f8bba884fd35216.txt",
+           "resType": "web",
+           "webUrl": "http://image.itmedia.co.jp/bizid/articles/1003/09/ts_dummy_image.gif"
+          },
+          "alt-field": "例）代替えテキスト"
+         },
+         "subModName": "bnr_loop",
+         "anchor": "",
+         "dec": ""
+        }
+       ]
+      },
+      "anchor": "",
+      "dec": ""
+     }
+    ]
+   }
+  }
+ }
+}

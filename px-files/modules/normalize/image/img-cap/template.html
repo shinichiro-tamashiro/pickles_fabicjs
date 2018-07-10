@@ -1,0 +1,31 @@
+{&{"input":{
+    "type": "image",
+    "name": "image-field",
+    "label": "画像",
+    "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "alt-field",
+  "label":"altに表示するテキストを入力してください。",
+  "description": "例）代替えテキスト",
+  "default": "例）代替えテキスト",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "caption-field",
+  "label":"キャプション表示するテキストを入力してください。",
+  "description": "例）キャプション",
+  "default": "例）キャプション",
+  "rows":1,
+  "hidden":true
+}}&}
+
+<figure class="m-img">
+<img src="{&{"echo":{"ref":"image-field"}}&}" alt="{&{"echo":{"ref":"alt-field"}}&}" />
+<figcaption>{&{"echo":{"ref":"caption-field"}}&}</figcaption>
+</figure>

@@ -1,0 +1,16 @@
+{
+  "name":"標準化モジュール",
+  "sort":[
+    "heading",
+    "text",
+    "link_button",
+    "list",
+    "image",
+    "table",
+    "box",
+    "accordion_modal",
+    "layout",
+    "outside_element",
+    "form"
+  ]
+}

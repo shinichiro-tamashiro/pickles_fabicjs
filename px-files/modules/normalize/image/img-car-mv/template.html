@@ -1,0 +1,60 @@
+<div class="m-carousel" data-type="mv">
+{&{"loop":{"name":"mv_loop", "label":"メインビジュアル"}}&}
+<div class="m-hdg-mv">
+<div class="m-hdg-mv__inner">
+{&{"input":{
+    "type": "image",
+    "name": "image-field",
+    "label": "画像",
+    "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "alt-field",
+  "label":"altに表示するテキストを入力してください。",
+  "description": "例）代替えテキスト",
+  "default": "",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "title-field",
+  "label":"メインビジュアル内に表示するタイトル",
+  "description": "メインビジュアル内にタイトルを表示する場合に入力してください。",
+  "default": "",
+  "rows":2,
+  "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "text-field",
+  "label":"メインビジュアル内に表示するテキスト",
+  "description": "メインビジュアル内にテキストを表示する場合に入力してください。",
+  "default": "",
+  "rows":2,
+  "hidden":true
+}}&}
+
+{&{"if":{"cond":[
+    [
+        "is_set:title-field",
+        "is_set:text-field"
+    ]
+]}}&}
+
+<div class="m-hdg-mv__elem">
+<p class="m-hdg">{&{"echo":{"ref":"title-field"}}&}</p>
+<p class="m-hdg-lead">{&{"echo":{"ref":"text-field"}}&}</p>
+<!-- /.m-hdg-mv__elem --></div>
+<div class="m-hdg-mv__img"><img src="{&{"echo":{"ref":"image-field"}}&}" alt="{&{"echo":{"ref":"alt-field"}}&}"></div>
+{&"else"&}
+<div class="m-hdg-mv__img"><img src="{&{"echo":{"ref":"image-field"}}&}" alt="{&{"echo":{"ref":"alt-field"}}&}"></div>
+{&"endif"&}
+<!-- /.m-hdg-mv__inner --></div>
+<!-- /.m-hdg-mv --></div>
+{&"endloop"&}
+<!-- /.m-carousel --></div>

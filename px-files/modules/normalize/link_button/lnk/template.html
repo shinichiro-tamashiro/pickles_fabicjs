@@ -1,0 +1,54 @@
+{&{"input":{
+  "type": "href",
+  "name": "href-field",
+  "label":"遷移先のURLを入力してください。",
+  "description": "",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "linkText-field",
+  "label":"リンク表示するテキストを入力してください。",
+  "description": "例）リンク",
+  "default": "例）リンク",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{"type":"select", "name":"link-type", "label":"リンクの種類", "display":"radio", "hidden":true, "options":[
+    {"value":"normal", "label":"通常リンク"},
+    {"value":"blank", "label":"別ウィンドウ"},
+    {"value":"modal", "label":"モーダルリンク"},
+    {"value":"pdf", "label":"PDFリンク"},
+    {"value":"back", "label":"戻るリンク"}
+]}}&}
+
+{&{"if":{"cond":[
+    [
+        "link-type==normal"
+    ]
+]}}&}
+<p><a href="{&{"echo":{"ref":"href-field"}}&}" class="m-link">{&{"echo":{"ref":"linkText-field"}}&}</a></p>
+{&{"elseif":{"cond":[
+    [
+        "link-type==blank"
+    ]
+]}}&}
+<p><a href="{&{"echo":{"ref":"href-field"}}&}" class="m-link" target="_blank">{&{"echo":{"ref":"linkText-field"}}&}</a></p>
+{&{"elseif":{"cond":[
+    [
+        "link-type==modal"
+    ]
+]}}&}
+<p><a href="{&{"echo":{"ref":"href-field"}}&}" class="m-link js-modal">{&{"echo":{"ref":"linkText-field"}}&}</a></p>
+{&{"elseif":{"cond":[
+    [
+        "link-type==pdf"
+    ]
+]}}&}
+<p><a href="{&{"echo":{"ref":"href-field"}}&}" class="m-link" target="_blank">{&{"echo":{"ref":"linkText-field"}}&}</a></p>
+{&"else"&}
+<p><a href="{&{"echo":{"ref":"href-field"}}&}" class="m-link" data-type="return">{&{"echo":{"ref":"linkText-field"}}&}</a></p>
+{&"endif"&}

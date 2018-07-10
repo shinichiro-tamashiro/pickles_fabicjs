@@ -1,0 +1,34 @@
+<div class="m-carousel" data-type="bnr">
+{&{"loop":{"name":"bnr_loop", "label":"バナー"}}&}
+{&{"input":{
+  "type": "href",
+  "name": "href-field",
+  "label":"遷移先のURLを入力してください。",
+  "description": "",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{
+    "type": "image",
+    "name": "image-field",
+    "label": "画像",
+    "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "alt-field",
+  "label":"altに表示するテキストを入力してください。",
+  "description": "例）代替えテキスト",
+  "default": "例）代替えテキスト",
+  "rows":1,
+  "hidden":true
+}}&}
+
+
+<div class="m-carousel__item">
+<a href="{&{"echo":{"ref":"href-field"}}&}"><img src="{&{"echo":{"ref":"image-field"}}&}" alt="{&{"echo":{"ref":"alt-field"}}&}"></a>
+<!-- /.m-carousel__item --></div>
+{&"endloop"&}
+<!-- /.m-carousel --></div>

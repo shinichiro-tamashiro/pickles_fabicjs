@@ -1,0 +1,86 @@
+{&{"input":{"type":"select", "name":"link-list-type", "label":"リストタイプ", "display":"radio", "hidden":true, "options":[
+    {"value":"vertical", "label":"縦並びリンクリスト"},
+    {"value":"progress", "label":"成り行きリンクリスト"},
+    {"value":"column2", "label":"2カラムリンクリスト"},
+    {"value":"column3", "label":"3カラムリンクリスト"},
+    {"value":"column4", "label":"4カラムリンクリスト"}
+]}}&}
+
+{&{"if":{"cond":[
+    [
+        "link-list-type==vertical"
+    ]
+]}}&}
+<ol class="m-list-link">
+{&{"elseif":{"cond":[
+    [
+        "link-list-type==progress"
+    ]
+]}}&}
+<ol class="m-list-link" data-col="flex">
+{&{"elseif":{"cond":[
+    [
+        "link-list-type==column2"
+    ]
+]}}&}
+<ol class="m-list-link" data-col="2">
+{&{"elseif":{"cond":[
+    [
+        "link-list-type==column3"
+    ]
+]}}&}
+<ol class="m-list-link" data-col="3">
+{&"else"&}
+<ol class="m-list-link" data-col="4">
+{&"endif"&}
+
+{&{"loop":{"name":"link_loop", "label":"リンクリスト"}}&}
+{&{"input":{
+  "type": "href",
+  "name": "href-field",
+  "label":"遷移先のURLを入力してください。",
+  "description": "",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "linkText-field",
+  "label":"リンク表示するテキストを入力してください。",
+  "description": "例）リンク",
+  "default": "例）リンク",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{"type":"select", "name":"link-type", "label":"リンクの種類", "display":"radio", "hidden":true, "options":[
+    {"value":"normal", "label":"通常リンク"},
+    {"value":"blank", "label":"別ウィンドウ"},
+    {"value":"modal", "label":"モーダルリンク"},
+    {"value":"pdf", "label":"PDFリンク"}
+]}}&}
+
+{&{"if":{"cond":[
+    [
+        "link-type==blank"
+    ]
+]}}&}
+<li><a href="{&{"echo":{"ref":"href-field"}}&}" target="_blank">{&{"echo":{"ref":"linkText-field"}}&}</a></li>
+{&{"elseif":{"cond":[
+    [
+        "link-type==modal"
+    ]
+]}}&}
+<li><a href="{&{"echo":{"ref":"href-field"}}&}" class="js-modal">{&{"echo":{"ref":"linkText-field"}}&}</a></li>
+{&{"elseif":{"cond":[
+    [
+        "link-type==pdf"
+    ]
+]}}&}
+<li><a href="{&{"echo":{"ref":"href-field"}}&}" target="_blank">{&{"echo":{"ref":"linkText-field"}}&}</a></li>
+{&"else"&}
+<li><a href="{&{"echo":{"ref":"href-field"}}&}">{&{"echo":{"ref":"linkText-field"}}&}</a></li>
+{&"endif"&}
+{&"endloop"&}
+</ol>

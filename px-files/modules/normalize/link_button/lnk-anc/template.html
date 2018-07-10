@@ -1,0 +1,38 @@
+{&{"input":{"type":"select", "name":"anc-list-type", "label":"リストタイプ", "display":"radio", "hidden":true, "options":[
+    {"value":"vertical", "label":"アンカーリンク縦並び"},
+    {"value":"side", "label":"アンカーリンク横並び"}
+]}}&}
+
+{&{"if":{"cond":[
+    [
+        "anc-list-type==vertical"
+    ]
+]}}&}
+<ol class="m-list-anc">
+{&"else"&}
+<ol class="m-list-anc" data-type="flex">
+{&"endif"&}
+
+{&{"loop":{"name":"anc_loop", "label":"アンカーリンクリスト"}}&}
+{&{"input":{
+  "type": "html",
+  "name": "anc-field",
+  "label":"アンカーリンク先のIDを入力してください。",
+  "description": "例）#ID",
+  "default": "例）#ID",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "linkText-field",
+  "label":"リンク表示するテキストを入力してください。",
+  "description": "例）アンカーリンク",
+  "default": "例）アンカーリンク",
+  "rows":1,
+  "hidden":true
+}}&}
+<li><a href="{&{"echo":{"ref":"anc-field"}}&}">{&{"echo":{"ref":"linkText-field"}}&}</a></li>
+{&"endloop"&}
+</ol>

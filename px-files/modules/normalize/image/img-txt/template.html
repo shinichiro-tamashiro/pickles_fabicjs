@@ -1,0 +1,58 @@
+{&{"input":{"type":"select", "name":"sp-img-type", "label":"SP時画像タイプ", "display":"radio", "hidden":true, "options":[
+    {"value":"top", "label":"SP時：画像上"},
+    {"value":"bottom", "label":"SP時：画像下"},
+    {"value":"stay", "label":"SP時：縮小※レイアウトそのまま"}
+]}}&}
+
+{&{"input":{
+    "type": "image",
+    "name": "image-field",
+    "label": "画像",
+    "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "alt-field",
+  "label":"altに表示するテキストを入力してください。",
+  "description": "例）代替えテキスト",
+  "default": "例）代替えテキスト",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "text-field",
+  "label":"表示するテキストを入力してください。",
+  "description": "例）テキストテキストテキスト",
+  "default": "例）テキストテキストテキスト",
+  "rows":4,
+  "hidden":true
+}}&}
+
+{&{"if":{"cond":[
+    [
+        "sp-img-type==top"
+    ]
+]}}&}
+<div class="m-card">
+<figure class="m-card__img--ltr">
+{&{"elseif":{"cond":[
+    [
+        "sp-img-type==bottom"
+    ]
+]}}&}
+<div class="m-card" data-type="order">
+<figure class="m-card__img">
+{&"else"&}
+<div class="m-card" data-type="fixed">
+<figure class="m-card__img--ltr">
+{&"endif"&}
+
+<img src="{&{"echo":{"ref":"image-field"}}&}" alt="{&{"echo":{"ref":"alt-field"}}&}" />
+</figure>
+<div class="m-card__body">
+{&{"echo":{"ref":"text-field"}}&}
+<!-- /.m-card__body --></div>
+<!-- /.m-card --></div>

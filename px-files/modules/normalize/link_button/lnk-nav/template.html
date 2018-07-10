@@ -1,0 +1,24 @@
+<ul class="m-nav-local">
+{&{"loop":{"name":"nav_loop", "label":"ページナビゲーション"}}&}
+{&{"input":{
+  "type": "href",
+  "name": "href-field",
+  "label":"リンク先を入力してください。",
+  "description": "",
+  "default": "",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "linkText-field",
+  "label":"リンク表示するテキストを入力してください。",
+  "description": "例）ページナビゲーション",
+  "default": "例）ページナビゲーション",
+  "rows":1,
+  "hidden":true
+}}&}
+<li><a href="{&{"echo":{"ref":"href-field"}}&}">{&{"echo":{"ref":"linkText-field"}}&}</a></li>
+{&"endloop"&}
+</ul>

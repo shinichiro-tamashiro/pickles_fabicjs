@@ -1,0 +1,43 @@
+<ul class="m-nav-pager">
+{&{"input":{"type":"select", "name":"pager-type", "label":"ページャータイプ", "display":"radio", "hidden":true, "options":[
+    {"value":"type1", "label":"ページャーType1"},
+    {"value":"type2", "label":"ページャーType2"}
+]}}&}
+
+{&{"if":{"cond":[
+    [
+        "pager-type==type1"
+    ]
+]}}&}
+<li class="m-nav-pager__prev"><a href="dummy">Prev:タイトル</a></li>
+{&{"loop":{"name":"pager_loop", "label":"ページャー"}}&}
+{&{"input":{
+  "type": "href",
+  "name": "href-field",
+  "label":"遷移先ページのURLを入力してください",
+  "description": "",
+  "rows":1,
+  "hidden":true
+}}&}
+
+{&{"input":{
+  "type": "html",
+  "name": "linkText-field",
+  "label":"ページ番号を入力してください。",
+  "description": "例）1",
+  "default": "例）1",
+  "rows":1,
+  "hidden":true
+}}&}
+<li><a href="{&{"echo":{"ref":"href-field"}}&}">{&{"echo":{"ref":"linkText-field"}}&}
+{&{"if":{"is_set":"linkText-field"}}&}
+</a></li>
+{&"endif"&}
+{&"endloop"&}
+<li class="m-nav-pager__next"><a href="dummy">Next:タイトル</a></li>
+{&"else"&}
+<li class="m-nav-pager__prev"><a href="dummy">Prev</a></li>
+<li>1/n</li>
+<li class="m-nav-pager__next"><a href="dummy">Next</a></li>
+{&"endif"&}
+</ul>
