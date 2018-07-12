@@ -18,10 +18,8 @@
      {
       "modId": "normalize:test/fabricjs",
       "fields": {
-       "fabricjs-field": "text"
-      },
-      "anchor": "",
-      "dec": ""
+       "fabricjs-field": ""
+      }
      }
     ]
    }
