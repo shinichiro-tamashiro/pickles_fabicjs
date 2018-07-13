@@ -1,6 +1,17 @@
 window.broccoliFieldFabricjs = function() {
     this.mkEditor = function( mod, data, elm, callback ){
-        var script = document.createElement('script');
+        /*
+        var canvasfield = '<iframe src="file:///C:/xampp/htdocs/pickles_fabricjs/px-files/broccoli-fields/fabricjs/editor.html" width="100%"></iframe>';
+        $(elm).html(canvasfield);
+
+        new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){
+            callback();
+        }); });
+        */
+
+        $('body').find('script')
+
+        /*var script = document.createElement('script');
         script.src = 'file:///C:/xampp/htdocs/pickles_fabricjs/px-files/broccoli-fields/fabricjs/fabric.min.js';
         script.onload = function(){
             var drawarea = new fabric.Canvas('drawarea', {
@@ -21,8 +32,6 @@ window.broccoliFieldFabricjs = function() {
                             + '<div><label for="lineWidth">線幅</label><span class="widthInfo">1</span><input type="range" value="1" min="1" max="20" id="lineWidth"></div>'
                             + '</div>';
             $(elm).html(canvasfield);
-
-            
         };
         document.head.appendChild(link);
         document.head.appendChild(script);
@@ -51,11 +60,7 @@ window.broccoliFieldFabricjs = function() {
             $('.widthInfo').html(this.value);
         });
 
-        new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){
-            callback();
-        }); });
-
-        return this;
+        return this;*/
 
 
         /*link.onload = function(){
@@ -93,11 +98,11 @@ window.broccoliFieldFabricjs = function() {
                 $('.widthInfo').html(this.value);
             });
 
-            new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){
-                callback();
-            }); });
-
             return this;
         };*/
+
+        new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){
+            callback();
+        }); });
     };
 }
