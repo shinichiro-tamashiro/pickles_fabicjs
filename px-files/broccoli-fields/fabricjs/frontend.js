@@ -20,47 +20,77 @@ window.broccoliFieldFabricjs = function() {
     link.rel = 'stylesheet';
     document.head.appendChild(link);
 
+    var drawarea;
+
     this.mkEditor = function( mod, data, elm, callback ){
         var canvasfield = '<div class="drawing">'
                         + '<canvas id="drawarea"></canvas>'
-                        + '<div><button id="btnDraw">描画</button><button id="btnDrawEnd">描画終了</button></div>'
-                        + '<div><label for="btnColor">カラー</label><input type="color" id="btnColor"></div>'
-                        + '<div><label for="lineWidth">線幅</label><span class="widthInfo">1</span><input type="range" value="1" min="1" max="20" id="lineWidth"></div>'
-                        + '</div>';
+                        + '<div class="control">'
+                        + '<div class="control-block"><button id="btnDraw" class="control-btn_drowstart">手描き開始</button><button id="btnDrawEnd" class="control-btn_drowend">手描き終了</button></div>'
+                        + '<div class="control-block"><label for="btnColor">カラー</label><input type="color" id="btnColor" class="control-btn_color"></div>'
+                        + '<div class="control-block"><label for="lineWidth">線幅</label><span class="control_linewidth">1</span>'
+                        + '<select name="lineWidth" id="lineWidth" class="control-btn_linewidth">';
+        var maxLineWidth = 30;
+        for(var i = 1; i <= maxLineWidth; i++) {
+            canvasfield += '<option value="' + i + '">' + i + '</option>'; 
+        }
+        canvasfield += '</select>'
+                     + '</div>';
+                     + '</div>';
         $(elm).html(canvasfield);
 
-        var drawarea = new fabric.Canvas('drawarea', {
+        drawarea = new fabric.Canvas('drawarea', {
             width: 700,
             height: 500
         });
 
-        //描画ボタン
-        $(document).on('click', '#btnDraw', function(){
-            drawarea.isDrawingMode = true;
-            return false;
-        });
-
-        //描画終了ボタン
-        $(document).on('click', '#btnDrawEnd', function(){
-            drawarea.isDrawingMode = false;
-            return false;
-        });
-
-        //線の色指定
-        $(document).on('change', '#btnColor', function(){
-            drawarea.freeDrawingBrush.color = this.value;
-        });
-
-        //線幅指定
-        $(document).on('change', '#lineWidth', function(){
-            drawarea.freeDrawingBrush.width = parseInt(this.value, 10) || 1;
-            $('.widthInfo').html(this.value);
-        });
+        if(data) {
+            drawarea.loadFromJSON(JSON.parse(data));
+        }
 
         new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){
             callback();
         }); });
-
         return this;
     };
+
+    this.saveEditorContent = function( elm, data, mod, callback, options ){
+        options = options || {};
+        options.message = options.message || function(msg){};//ユーザーへのメッセージテキストを送信
+
+        if(drawarea.getObjects().length > 0) {
+            var fabricJson = drawarea.toJSON();
+            var imgUrl = drawarea.toDataURL({format: 'png'});
+            fabricJson['previewImgUrl'] = imgUrl;
+            var src = JSON.stringify(fabricJson);
+        }
+
+        new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){
+            callback(src);
+        }); });
+        return this;
+    }
+
+    //描画ボタン
+    $(document).on('click', '#btnDraw', function(){
+        drawarea.isDrawingMode = true;
+        return false;
+    });
+
+    //描画終了ボタン
+    $(document).on('click', '#btnDrawEnd', function(){
+        drawarea.isDrawingMode = false;
+        return false;
+    });
+
+    //線の色指定
+    $(document).on('change', '#btnColor', function(){
+        drawarea.freeDrawingBrush.color = this.value;
+    });
+
+    //線幅指定
+    $(document).on('change', '#lineWidth', function(){
+        drawarea.freeDrawingBrush.width = parseInt(this.value, 10) || 1;
+        $('.control_linewidth').html(this.value);
+    });
 }
