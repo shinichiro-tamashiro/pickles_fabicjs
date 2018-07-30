@@ -28,14 +28,15 @@ window.broccoliFieldFabricjs = function() {
                         + '<div class="control">'
                         + '<div class="control-block"><button id="btnDraw" class="control-btn_drowstart">手描き開始</button><button id="btnDrawEnd" class="control-btn_drowend">手描き終了</button></div>'
                         + '<div class="control-block"><label for="btnColor">カラー</label><input type="color" id="btnColor" class="control-btn_color"></div>'
-                        + '<div class="control-block"><label for="lineWidth">線幅</label><span class="control_linewidth">1</span>'
+                        + '<div class="control-block"><label for="lineWidth">線幅</label>'
                         + '<select name="lineWidth" id="lineWidth" class="control-btn_linewidth">';
         var maxLineWidth = 30;
         for(var i = 1; i <= maxLineWidth; i++) {
             canvasfield += '<option value="' + i + '">' + i + '</option>'; 
         }
         canvasfield += '</select>'
-                     + '</div>';
+                     + '</div>'
+                     + '<div class="control-block"><button id="btnDele" class="control-btn_dele">削除</button></div>'
                      + '</div>';
         $(elm).html(canvasfield);
 
@@ -91,6 +92,11 @@ window.broccoliFieldFabricjs = function() {
     //線幅指定
     $(document).on('change', '#lineWidth', function(){
         drawarea.freeDrawingBrush.width = parseInt(this.value, 10) || 1;
-        $('.control_linewidth').html(this.value);
+    });
+
+    //削除
+    $(document).on('click', '#btnDele', function(){
+        //drawarea.clearContext(drawarea.getActiveObjects());
+        //return false:
     });
 }
