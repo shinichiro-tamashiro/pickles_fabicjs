@@ -36,7 +36,10 @@ window.broccoliFieldFabricjs = function() {
         }
         canvasfield += '</select>'
                      + '</div>'
-                     + '<div class="control-block"><button id="btnDele" class="control-btn_dele">削除</button></div>'
+                     + '<div class="control-block"><button id="btnText" class="control-btn_text">文字入力</button></div>'
+                     + '<div class="control-block"><button id="btnGroup" class="control-btn_group">グループ化</button><button id="btnGroupOff" class="control-btn_groupoff">グループ解除</button></div>'
+                     + '<div class="control-block"><button id="btnObjDele" class="control-btn_objdele">削除</button></div>'
+                     + '<div class="control-block"><button id="btnAllDele" class="control-btn_alldele">全削除</button></div>'
                      + '</div>';
         $(elm).html(canvasfield);
 
@@ -94,9 +97,59 @@ window.broccoliFieldFabricjs = function() {
         drawarea.freeDrawingBrush.width = parseInt(this.value, 10) || 1;
     });
 
+    //テキスト入力
+    $(document).on('click', '#btnText', function(){
+        var textbox = new fabric.Textbox('', {
+            left: 50,
+            top: 50,
+            width: 150,
+            fontSize: 20
+        });
+        drawarea.add(textbox).setActiveObject(textbox);
+
+        return false;
+    });
+
+    //オブジェクトグループ化
+    $(document).on('click', '#btnGroup', function(){
+        if (!drawarea.getActiveObject()) {
+            return false;
+        }
+        if (drawarea.getActiveObject().type !== 'activeSelection') {
+            return false;
+        }
+        drawarea.getActiveObject().toGroup();
+        drawarea.requestRenderAll();
+
+        return false;
+    });
+
+    //オブジェクトグループ化解除
+   $(document).on('click', '#btnGroupOff', function(){
+        if (!drawarea.getActiveObject()) {
+            return false;
+        }
+        if (drawarea.getActiveObject().type !== 'group') {
+            return false;
+        }
+        drawarea.getActiveObject().toActiveSelection();
+        drawarea.requestRenderAll();
+
+        return false;
+    });
+
     //削除
-    $(document).on('click', '#btnDele', function(){
-        //drawarea.clearContext(drawarea.getActiveObjects());
-        //return false:
+    $(document).on('click', '#btnObjDele', function(){
+        var obj = drawarea.getActiveObjects();
+        for(var i in obj){
+            drawarea.remove(obj[i]);
+        }
+        return false;
+    });
+
+    //キャンバス内全削除
+    $(document).on('click', '#btnAllDele', function(){
+        drawarea.clear();
+        return false;
     });
 }
